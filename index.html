@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad #5 - Biblioteca de Componentes UI</title>
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="styles/utilities.css">
+        <link rel="stylesheet" href="styles/tokens.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <div class="navbar__logo">
+                <h1><i class="fas fa-book"></i> CSS BIBLIOTECA</h1>
+            </div>
+            <nav class="navbar__menu">
+                <a href="#hero" class="nav-link">Diseño css</a>
+                <a href="#cards" class="nav-link">Planes</a>
+                <a href="#forms" class="nav-link">suscripciones</a>
+
+            </nav>
+            <button class="btn btn-outline" id="theme-toggle">
+                <i class="fas fa-moon"></i> Claro/Oscuro
+            </button>
+            <button class="navbar__toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container main-content">
+        <section id="hero" class="section">
+        <section class="hero">
+            <h2 class="hero__title">Biblioteca de Componentes UI</h2>
+            <p class="hero__subtitle">Componentes modulares y reutilizables con CSS avanzado</p>
+        <div class="hero__actions">
+            <a href="https://drive.google.com/drive/folders/1n6ejxqG81Hv_lxKmkhTJpKOz-G1_iNqG?usp=drive_link" class="btn btn-primary btn-lg" download>
+            <i class="fas fa-download"></i> Descargar CSS
+            </a>
+            <a href="https://github.com/dariosanchez0222?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+             <i class="fab fa-github"></i> Ver en GitHub
+        </a>
+            </div>
+        </section>
+
+        <!-- SECCIÓN TARJETAS -->
+        <section id="cards" class="section">
+            <h2 class="section__title">PLANES</h2>
+            <p class="section__description">Selecciona el Plan que mas se adapte a Ti</p>
+            
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card__content">
+                        <h3 class="card__title">Plan Basico</h3>
+                        <span class="badge badge-success">$ 3.99</span>
+                        <p class="card__text">Simple pero funcional contiene lo basico.</p>
+                        <div class="card__actions">
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-outline">Compartir</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card card--elevated">
+                    <div class="card__header">
+                        <h3 class="card__title">Plan Estandar</h3>
+                        <span class="badge badge-success">$5.99</span>
+                    </div>
+                    <div class="card__content">
+                        <p class="card__text">Un plan especial con mejor fluidez, adaptativo.</p>
+                        <div class="card__actions">
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-outline">Compartir</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card card--interactive">
+                    <div class="card__content">
+                        <h3 class="card__title">Plan Premium</h3>
+                        <span class="badge badge-success">$9.99</span>
+                        <p class="card__text">Nuestra Pagina insigna con todos los efectos modernos de Java scrit.</p>
+                       <div class="card__actions">
+                            <button class="btn btn-primary">Ver más</button>
+                            <button class="btn btn-outline">Compartir</button>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN FORMULARIOS -->
+        <section id="forms" class="section">
+            <h2 class="section__title">Suscripciones</h2>
+            <p class="section__description">Llena tus datos y elije tu plan</p>
+            
+            <div class="form-container">
+                <form class="form">
+                    <div class="form__group">
+                        <label for="name" class="form__label">
+                            <i class="fas fa-user"></i> Nombre Completo
+                        </label>
+                        <input type="text" id="name" class="form__input" placeholder="Ingresa tu nombre">
+                        <small class="form__help">Mínimo 3 caracteres</small>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="email" class="form__label">
+                            <i class="fas fa-envelope"></i> Correo Electrónico
+                        </label>
+                        <input type="email" id="email" class="form__input" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="password" class="form__label">
+                            <i class="fas fa-lock"></i> Contraseña
+                        </label>
+                        <input type="password" id="password" class="form__input form__input--success" placeholder="********">
+                        <small class="form__help form__help--success">Contraseña segura</small>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label class="form__label">Preferencias</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox">
+                                <input type="checkbox" checked>
+                                <span class="checkbox__checkmark"></span>
+                                Recibir notificaciones
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox__checkmark"></span>
+                                Acepto los términos
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label class="form__label">Plan</label>
+                        <div class="radio-group">
+                            <label class="radio">
+                                <input type="radio" name="plan" checked>
+                                <span class="radio__circle"></span>
+                                Básico
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="plan">
+                                <span class="radio__circle"></span>
+                                Estándar
+                            </label>
+                              </label>
+                            <label class="radio">
+                                <input type="radio" name="plan">
+                                <span class="radio__circle"></span>
+                                Premium
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form__group">
+                        <label for="country" class="form__label">
+                            <i class="fas fa-globe"></i> País
+                        </label>
+                        <select id="country" class="form__select">
+                            <option value="">Selecciona un país</option>
+                            <option value="ec">Ecuador</option>
+                            <option value="co">Colombia</option>
+                            <option value="pe">Perú</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form__actions">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="reset" class="btn btn-outline">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>UI Bliblioteca &copy; 2025 - Desarrollo de Sistemas Informáticos</p>
+            <p>Actividad #5 - Biblioteca de Componentes UI</p>
+        </div>
+    </footer>
+
+ 
+    <script src="demo.js"></script>
+</body>
+</html>

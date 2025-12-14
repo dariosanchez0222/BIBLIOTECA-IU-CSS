@@ -1,0 +1,17 @@
+/* ===== TEMA CLARO (por defecto) ===== */
+:root {
+  --bg-page: #f8fafc;
+  --bg-surface: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-ui: #cbd5e1;
+}
+
+/* ===== TEMA OSCURO ===== */
+[data-theme="dark"] {
+  --bg-page: #0b1220;
+  --bg-surface: #111a2e;
+  --text-main: #e8eefc;
+  --text-muted: #a9b7d6;
+  --border-ui: rgba(255,255,255,.15);
+}
